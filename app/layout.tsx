@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: "Bhanu Kiran R | Software Development Engineer",
   description: "Portfolio of Bhanu Kiran R — SDE specialising in scalable full-stack systems, AI/ML integration, and high-concurrency applications.",
   keywords: ["Software Developer", "Full-Stack", "AI/ML", "React", "FastAPI", "Portfolio"],
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
