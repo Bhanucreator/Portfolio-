@@ -118,7 +118,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="grid grid-cols-3 gap-6 mb-12 max-w-md"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-12 max-w-md"
           >
             {[
               { value: "200+", label: "Concurrent WebSocket Connections" },
@@ -137,11 +137,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-wrap items-center gap-4"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
           >
             <a
               href="#projects"
-              className="group px-8 py-3.5 rounded-xl font-bold text-white transition-all duration-300 flex items-center gap-2"
+              className="group w-full sm:w-auto justify-center px-8 py-3.5 rounded-xl font-bold text-white transition-all duration-300 flex items-center gap-2"
               style={{
                 background: "linear-gradient(135deg, #7C3AED, #00E5FF)",
                 boxShadow: "0 0 30px rgba(124,58,237,0.35)",
@@ -154,9 +154,9 @@ export default function HeroSection() {
               href="/IBM (1).pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 rounded-xl border border-accent-violet/30 text-text-primary font-medium hover:bg-accent-violet/8 hover:border-accent-cyan/40 transition-all duration-300 flex items-center gap-2"
+              className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-xl border border-accent-violet/30 text-text-primary font-medium hover:bg-accent-violet/8 hover:border-accent-cyan/40 transition-all duration-300 flex items-center gap-2"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
               View Resume
             </a>
           </motion.div>

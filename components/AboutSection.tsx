@@ -84,7 +84,7 @@ export default function AboutSection() {
             </div>
 
             {/* Quick info */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               {[
                 { icon: "◈", text: "Bangarapet, Karnataka" },
                 { icon: "◈", text: "CBIT Kolar, 2023–27" },
@@ -92,8 +92,8 @@ export default function AboutSection() {
                 { icon: "◈", text: "2× Published Researcher" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-sm text-text-secondary">
-                  <span className="text-accent-cyan">{item.icon}</span>
-                  <span>{item.text}</span>
+                  <span className="text-accent-cyan shrink-0">{item.icon}</span>
+                  <span className="break-all sm:break-words">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -105,7 +105,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-2 gap-5"
+            className="grid grid-cols-2 gap-3 sm:gap-5"
           >
             {aboutStats.map((stat, idx) => (
               <motion.div
@@ -114,7 +114,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 + idx * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-bg-card rounded-2xl p-6 border border-white/5 card-hover text-center relative overflow-hidden"
+                className="group bg-bg-card rounded-2xl p-4 sm:p-6 border border-white/5 card-hover text-center relative overflow-hidden flex flex-col justify-center"
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"

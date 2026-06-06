@@ -42,7 +42,7 @@ const projects = [
   {
     id: "cops-website",
     title: "COPS Official Website",
-    description: "Engineered the official Club of Programmers (COPS) website at CBIT Kolar — a platform centralising resources, events, and club news for a 200+ student community. Built in collaboration with Technical Lead Deepak P S. Deployed on Vercel with modern Next.js architecture, smooth animations, and responsive design.",
+    description: "Engineered the official Club of Programmers (COPS) website at CBIT Kolar, a platform centralising resources, events, and club news for a 200+ student community. Built in collaboration with Technical Lead Deepak P S. Deployed on Vercel with modern Next.js architecture, smooth animations, and responsive design.",
     image: "/images/project_trip_guide.png",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel", "React"],
     link: "https://cops-official.vercel.app",
