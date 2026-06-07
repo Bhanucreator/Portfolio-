@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 /* ─── Data — All publications from real resume + ICNEXT paper ─── */
@@ -53,6 +53,15 @@ function PublicationCard({
   totalCards: number;
   scrollYProgress: MotionValue<number>;
 }) {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const accent = cardAccents[index % cardAccents.length];
 
   const segmentSize = 1 / totalCards;
@@ -63,6 +72,9 @@ function PublicationCard({
   // Apply scaling and fading as user scrolls to the next card
   const scale   = useTransform(scrollYProgress, [fadeStart, fadeEnd], index < totalCards - 1 ? [1, 0.94] : [1, 1]);
   const opacity = useTransform(scrollYProgress, [fadeStart, fadeEnd], index < totalCards - 1 ? [1, 0.3] : [1, 1]);
+
+  const cardScale = isDesktop ? scale : 1;
+  const cardOpacity = isDesktop ? opacity : 1;
 
   return (
     <div
@@ -76,13 +88,15 @@ function PublicationCard({
       }}
     >
       <motion.div
-        style={{ scale, opacity, transformOrigin: "top" }}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-        className="relative rounded-3xl overflow-hidden group cursor-default shadow-2xl bg-bg-primary/50 backdrop-blur-sm border border-white/5"
       >
+        <motion.div
+          style={{ scale: cardScale, opacity: cardOpacity, transformOrigin: "top" }}
+          className="relative rounded-3xl overflow-hidden group cursor-default shadow-2xl bg-bg-primary/50 backdrop-blur-sm border border-white/5"
+        >
         {/* Card Background */}
         <div
           className="absolute inset-0 rounded-3xl"
@@ -229,6 +243,7 @@ function PublicationCard({
           </div>
 
         </div>
+      </motion.div>
       </motion.div>
     </div>
   );
