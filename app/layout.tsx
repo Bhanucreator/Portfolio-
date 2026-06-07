@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         <NavBar />
-        <main className="flex flex-col min-h-screen overflow-x-hidden">
+        <main className="flex flex-col min-h-screen">
           {children}
         </main>
       </body>

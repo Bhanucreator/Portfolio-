@@ -118,16 +118,16 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col md:grid md:grid-cols-3 gap-6 mb-12 max-w-md md:max-w-xl"
+            className="flex flex-col sm:grid sm:grid-cols-3 gap-6 mb-12 max-w-md sm:max-w-xl"
           >
             {[
               { value: "200+", label: "Concurrent WebSocket Connections" },
               { value: "92%",  label: "RAG Legal Retrieval Accuracy" },
               { value: "94.3%",label: "CNN Image Classification" },
             ].map((m, i) => (
-              <div key={i} className="flex items-center gap-4 md:block">
-                <span className="text-3xl md:text-4xl font-extrabold text-gradient min-w-[80px] md:min-w-0 shrink-0">{m.value}</span>
-                <p className="text-xs md:text-[10px] text-text-muted font-mono uppercase mt-0 md:mt-1 leading-tight">{m.label}</p>
+              <div key={i} className="flex items-center gap-4 sm:block">
+                <span className="text-3xl sm:text-4xl font-extrabold text-gradient min-w-[80px] sm:min-w-0 shrink-0">{m.value}</span>
+                <p className="text-xs sm:text-[10px] text-text-muted font-mono uppercase mt-0 sm:mt-1 leading-tight">{m.label}</p>
               </div>
             ))}
           </motion.div>
