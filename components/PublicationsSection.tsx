@@ -65,16 +65,26 @@ function PublicationCard({
   const accent = cardAccents[index % cardAccents.length];
 
   const segmentSize = 1 / totalCards;
-  // Trigger the fade/scale a bit later to ensure it doesn't fade while being read
   const fadeStart  = segmentSize * (index + 0.4); 
   const fadeEnd    = segmentSize * (index + 0.9);
 
-  // Apply scaling and fading as user scrolls to the next card
-  const scale   = useTransform(scrollYProgress, [fadeStart, fadeEnd], index < totalCards - 1 ? [1, 0.94] : [1, 1]);
-  const opacity = useTransform(scrollYProgress, [fadeStart, fadeEnd], index < totalCards - 1 ? [1, 0.3] : [1, 1]);
+  // Dynamic custom transform mapping that evaluates isDesktop inside the scroll tick.
+  // This keeps scale and opacity bound as active MotionValues so Framer Motion works correctly.
+  const scale = useTransform(scrollYProgress, (latest) => {
+    if (!isDesktop || index >= totalCards - 1) return 1;
+    if (latest <= fadeStart) return 1;
+    if (latest >= fadeEnd) return 0.94;
+    const pct = (latest - fadeStart) / (fadeEnd - fadeStart);
+    return 1 - pct * (1 - 0.94);
+  });
 
-  const cardScale = isDesktop ? scale : 1;
-  const cardOpacity = isDesktop ? opacity : 1;
+  const opacity = useTransform(scrollYProgress, (latest) => {
+    if (!isDesktop || index >= totalCards - 1) return 1;
+    if (latest <= fadeStart) return 1;
+    if (latest >= fadeEnd) return 0.3;
+    const pct = (latest - fadeStart) / (fadeEnd - fadeStart);
+    return 1 - pct * (1 - 0.3);
+  });
 
   return (
     <div
@@ -94,7 +104,7 @@ function PublicationCard({
         transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
       >
         <motion.div
-          style={{ scale: cardScale, opacity: cardOpacity, transformOrigin: "top" }}
+          style={{ scale, opacity, transformOrigin: "top" }}
           className="relative rounded-3xl overflow-hidden group cursor-default shadow-2xl bg-bg-primary/50 backdrop-blur-sm border border-white/5"
         >
         {/* Card Background */}
