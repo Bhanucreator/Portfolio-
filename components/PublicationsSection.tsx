@@ -28,7 +28,7 @@ const publicationsData = [
   },
   {
     id: "drug-discovery",
-    title: "AI Applications in Pharmaceutical Drug Discovery",
+    title: "A Comprehensive Survey on Artificial Intelligence in Drug Discovery and Pharmaceutical Research",
     conference:
       "7th National Conference on Recent Trends in Engineering Science & Technology (NCRTEST-2025)",
     isbn: "978-93-6884-411-2",
