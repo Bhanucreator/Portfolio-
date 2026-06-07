@@ -236,7 +236,7 @@ export default function SkillsSection() {
                 </div>
 
                 {/* Skill bubbles */}
-                <div className="flex flex-wrap justify-center gap-10 md:gap-12 lg:gap-14 pb-6">
+                <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12 lg:gap-14 pb-6">
                   {cat.skills.map((skill) => {
                     const idx = globalIdx++;
                     return <SkillBubble key={skill.name} skill={skill} globalIdx={idx} />;
