@@ -79,7 +79,18 @@ export default function NavBar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileOpen(false);
+                    const targetId = link.href.substring(1);
+                    const elem = document.getElementById(targetId);
+                    if (elem) {
+                      setTimeout(() => {
+                        elem.scrollIntoView({ behavior: "smooth" });
+                        window.history.pushState(null, "", link.href);
+                      }, 100);
+                    }
+                  }}
                   className="px-4 py-3 text-sm text-text-secondary hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                 >
                   {link.label}
@@ -87,6 +98,7 @@ export default function NavBar() {
               ))}
               <a
                 href="mailto:bhanukiran90216@gmail.com"
+                onClick={() => setMobileOpen(false)}
                 className="mt-2 px-4 py-3 text-sm font-semibold text-accent-cyan hover:bg-accent-violet/10 rounded-lg transition-colors"
               >
                 Let&apos;s Talk →
