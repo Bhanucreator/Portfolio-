@@ -97,7 +97,7 @@ export default function HeroSection() {
               Bhanu Kiran
             </h1>
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold font-sans text-text-secondary mb-8 h-[36px] md:h-[48px] flex items-center">
-              <Typewriter words={["AI/ML Engineer", "Full-Stack Developer", "Published Researcher"]} />
+              <Typewriter words={["Full-Stack AI Engineer", "Published Researcher"]} />
             </h2>
           </motion.div>
 
@@ -151,7 +151,7 @@ export default function HeroSection() {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
             <a
-              href="/IBM (1).pdf"
+              href="/BKsResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-xl border border-accent-violet/30 text-text-primary font-medium hover:bg-accent-violet/8 hover:border-accent-cyan/40 transition-all duration-300 flex items-center gap-2"
