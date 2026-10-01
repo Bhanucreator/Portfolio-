@@ -24,7 +24,7 @@ const publicationsData = [
       "Proof-of-concept frontend validated with stratified user testing including women farmers.",
     ],
     linkText: "View Publication",
-    linkUrl: "#",
+    linkUrl: "https://xlescience.org/index.php/NIJASET/article/view/2024/",
   },
   {
     id: "drug-discovery",
@@ -42,7 +42,7 @@ const publicationsData = [
       "Reduced computational requirements for compound analysis by 35% compared to traditional molecular dynamics.",
     ],
     linkText: "View Research",
-    linkUrl: "#",
+    linkUrl: "https://www.store.bookrivers.com/product/national-conference-on-recent-trends-in-engineering-science-and-technology-ncrtest-25/",
   },
 ];
 

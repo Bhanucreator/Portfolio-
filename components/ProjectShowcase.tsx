@@ -4,6 +4,24 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    id: "kisanshakti",
+    title: "KisanShakti: Smart Agritech Ecosystem",
+    description: "An offline-first agritech platform integrating on-device Edge-AI pathology, solar IoT sensing, and direct commerce for smallholder farmers. Features an INT8 Quantized MobileNetV2 model delivering sub-2s offline leaf diagnosis with ICAR remedies in Kannada/English, paired with an active-learning pipeline for low-confidence detections (<55%). Backed by an ESP32 BLE telemetry node, a FastAPI backend with 63 REST endpoints, and a PostGIS ST_DWithin geospatial engine enabling 25km P2P mandi trading with ±5% Agmarknet fair-price protection. Published in NIJASET / ICNEXT-2026 (ISBN: 978-93-5768-920-5).",
+    image: "/images/kisanshakti.png",
+    tags: [
+      "React Native",
+      "FastAPI",
+      "TensorFlow Lite",
+      "PostGIS",
+      "SQL Lite",
+      "ESP32 IoT",
+      "Edge-AI",
+      "Python 3.12"
+    ],
+    link: "https://github.com/Bhanucreator/KisanShakti",
+    theme: "#10B981"
+  },
+  {
     id: "ipc-legal",
     title: "IPC Legal Assistant",
     description: "A full-stack cross-platform mobile app providing instant, verified information on the Indian Penal Code 1860 using React Native (Expo) + Flask backend. Implements Retrieval-Augmented Generation (RAG) with LangChain and Llama 3.3-70B, achieving 92% accuracy in legal section retrieval from a 227-page corpus. Query response time under 800ms with 99.5% uptime over 60-day production testing.",
@@ -22,13 +40,21 @@ const projects = [
     theme: "#C026D3",
   },
   {
-    id: "ai-chatbot",
-    title: "Python AI Chatbot Platform",
-    description: "Asynchronous FastAPI platform handling 200+ concurrent WebSocket connections with 99.8% uptime over 90 days, zero message loss. Reduced average LLM response latency to 450ms via Redis session management and context pooling. Decreased hallucination rates by 40% through advanced prompt engineering. CI/CD via GitHub Actions reduced release cycle by 75%.",
-    image: "/images/project_ai_chatbot.png",
-    tags: ["FastAPI", "OpenAI API", "WebSockets", "Redis", "Docker", "GitHub Actions"],
-    link: "https://github.com/Bhanucreator/Python_Tutor_AI.git",
-    theme: "#00E5FF",
+    id: "faculty-evaluation-system",
+    title: "Automated Faculty Evaluation System",
+    description: "Production-ready full-stack platform developed for C. Byregowda Institute of Technology to digitise anonymous faculty evaluations. Built secure authentication and anti-misuse mechanisms using JWT, registration gates, secret-code verification, and IP-based rate limiting. Developed an admin dashboard with evaluation analytics, faculty and section management, teacher-section mapping, CSV reporting, and semester reset workflows.",
+    image: "/images/FES.png",
+    tags: [
+      "React",
+      "FastAPI",
+      "PostgreSQL",
+      "Supabase",
+      "Tailwind CSS",
+      "JWT",
+      "SQLAlchemy"
+    ],
+    link: "https://github.com/Bhanucreator/CBIT-FacultyEvaluationSystem",
+    theme: "#3B82F6",
   },
   {
     id: "image-classifier",
@@ -43,7 +69,7 @@ const projects = [
     id: "cops-website",
     title: "COPS Official Website",
     description: "Engineered the official Club of Programmers (COPS) website at CBIT Kolar, a platform centralising resources, events, and club news for a 200+ student community. Built in collaboration with Technical Lead Deepak P S. Deployed on Vercel with modern Next.js architecture, smooth animations, and responsive design.",
-    image: "/images/project_trip_guide.png",
+    image: "/images/COPS.png",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel", "React"],
     link: "https://cops-official.vercel.app",
     theme: "#0EA5E9",

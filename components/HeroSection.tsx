@@ -97,7 +97,7 @@ export default function HeroSection() {
               Bhanu Kiran
             </h1>
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold font-sans text-text-secondary mb-8 h-[36px] md:h-[48px] flex items-center">
-              <Typewriter words={["Full-Stack AI Engineer", "Published Researcher"]} />
+              <Typewriter words={["AI Full-Stack Developer", "Published Researcher"]} />
             </h2>
           </motion.div>
 
@@ -122,8 +122,8 @@ export default function HeroSection() {
           >
             {[
               { value: "200+", label: "Concurrent WebSocket Connections" },
-              { value: "92%",  label: "RAG Legal Retrieval Accuracy" },
-              { value: "94.3%",label: "CNN Image Classification" },
+              { value: "92%", label: "RAG Legal Retrieval Accuracy" },
+              { value: "94.3%", label: "CNN Image Classification" },
             ].map((m, i) => (
               <div key={i} className="flex items-center gap-4 sm:block">
                 <span className="text-3xl sm:text-4xl font-extrabold text-gradient min-w-[80px] sm:min-w-0 shrink-0">{m.value}</span>
