@@ -7,7 +7,7 @@ const projects = [
     id: "kisanshakti",
     title: "KisanShakti: Smart Agritech Ecosystem",
     description: "An offline-first agritech platform integrating on-device Edge-AI pathology, solar IoT sensing, and direct commerce for smallholder farmers. Features an INT8 Quantized MobileNetV2 model delivering sub-2s offline leaf diagnosis with ICAR remedies in Kannada/English, paired with an active-learning pipeline for low-confidence detections (<55%). Backed by an ESP32 BLE telemetry node, a FastAPI backend with 63 REST endpoints, and a PostGIS ST_DWithin geospatial engine enabling 25km P2P mandi trading with ±5% Agmarknet fair-price protection. Published in NIJASET / ICNEXT-2026 (ISBN: 978-93-5768-920-5).",
-    image: "/images/kisanshakti.png",
+    image: "/images/KisanShakti.png",
     tags: [
       "React Native",
       "FastAPI",
